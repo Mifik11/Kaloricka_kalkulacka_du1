@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Kaloricka_kalkulacka_du1.Views"
+       Title="Kaloricka_kalkulacka_du1"
+       x:Class="Kaloricka_kalkulacka_du1.AppShell">
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource CorporateBlue}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource CorporateDarkBlue}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Domů" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:MainWindowP}" />
+        <ShellContent Title="Uložit" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:AddNewFoodP}" />
+        <ShellContent Title="Mez" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ChangeLimitP}" />
+    </TabBar>
+
+
+</Shell>

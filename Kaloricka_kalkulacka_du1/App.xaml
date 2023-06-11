@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kaloricka_kalkulacka_du1.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="CorporateBlue">#004980</Color>
+            <Color x:Key="CorporateDarkBlue">#00335a</Color>
+            <Color x:Key="CorporateWhite">#e4eaff</Color>
+            <Color x:Key="CorporateGreen">#008000</Color>
+            <Color x:Key="CorporateLightBlue">#c9d5ff</Color>
+            <Style x:Key="CorporateButton" TargetType="Button">
+                <Setter Property="Background" Value="#00335a" />
+                <Setter Property="TextColor" Value="#e4eaff" />
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

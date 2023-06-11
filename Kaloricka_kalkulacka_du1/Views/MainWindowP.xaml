@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kaloricka_kalkulacka_du1.Views.MainWindowP"
+             Title="Kalorická kalkulačka">
+             
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource CorporateBlue}">
+            <Grid Margin="10" >
+                <Grid Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="1,3"
+                       Text="Bílkoviny"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"                               
+                       Text="Sacharidy"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="Tuky"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="Cukry"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       TextColor="{StaticResource CorporateWhite}"/>
+
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       x:Name="lbProtein"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       x:Name="lbCarbohydrates"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       x:Name="lbFat"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       x:Name="lbSugar"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="1,3"
+                       Text="Bílkoviny"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="Sacharidy"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="Tuky"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="Cukry"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       TextColor="{StaticResource CorporateWhite}"/>
+
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       x:Name="lbProteinLim"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       x:Name="lbCarbohydratesLim"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       x:Name="lbFatLim"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Margin="1,3"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       x:Name="lbSugarLim"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                    </Grid>
+                    <Label Margin="20,40"
+                   Text="0"
+                   HorizontalOptions="Center"
+                   Grid.Column="2"
+                   FontSize="30"
+                   x:Name="lbRow"
+                   TextColor="{StaticResource CorporateWhite}"/>
+                </Grid>
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label FontSize="20"
+                       Text="Dnešek"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                   TextColor="{StaticResource CorporateGreen}"/>
+                    <Label FontSize="20"
+                       Text="Cíl"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                   TextColor="{StaticResource CorporateGreen}"/>
+                    <Label FontSize="20"
+                       Text="Počet dnů"
+                       HorizontalOptions="Center"
+                       Grid.Column="2"
+                   TextColor="{StaticResource CorporateGreen}"/>
+                </Grid>
+                <Grid Grid.Row="2"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <ListView x:Name="lv"  HorizontalOptions="Fill" ItemsSource="{Binding AllPersons }" Grid.RowSpan="9" Background="{StaticResource CorporateBlue}" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid HorizontalOptions="Fill" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Entry Grid.Column="0" Text="{Binding foodname}" HorizontalOptions="Center" TextColor="{StaticResource CorporateWhite}"/>
+                                        <Button
+                                            x:Name="btDelete"
+                                            Grid.Column="1"
+                                            Text="Vymazat" 
+                                            Margin="1" 
+                                            TextColor="{StaticResource CorporateWhite}"
+                                            Style="{StaticResource CorporateButton}"
+                                            />
+                                        <!--Clicked="btDelete_Click"-->
+                                        <Button
+                                            x:Name="btChange"
+                                            Grid.Column="2"
+                                            Text="Uprav"
+                                            Margin="1" 
+                                            TextColor="{StaticResource CorporateWhite}"
+                                            Style="{StaticResource CorporateButton}"
+                                            />
+                                            <!--Clicked="BtChange_Clicked"-->
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                    <Grid Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/> 
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label FontSize ="15"
+                       Text="Jídlo"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label FontSize ="15"
+                       Text="Množství"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       TextColor="{StaticResource CorporateWhite}"/>
+                        <Label Grid.Row="2"
+                               Grid.Column="1"
+                       Text="Zkontrolujte data!"
+                       HorizontalOptions="Center"
+                       TextColor="Red"
+                       x:Name="lbError"
+                       IsVisible="false"/>
+                        <Picker Grid.Row="1"
+                               Grid.Column="0"
+                               x:Name="itemPc"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               Title="Vyberte jídlo"
+                               TitleColor="#e4eaff"
+                               TextColor="#e4eaff"
+                               SelectedItem="{Binding foodname, Mode=TwoWay}" />
+                        <Entry Grid.Row="1"
+                               FontSize="15"
+                               Grid.Column="1"
+                               Text="{Binding amount, Mode=TwoWay}"
+                               x:Name="tbAmount"
+                               TextColor="White"
+                               BackgroundColor="#004980"
+                               Keyboard="Numeric"
+                               Unfocused="UnfocusedEn"/>
+                        <Button Grid.RowSpan="3"
+                                Grid.Column="2"
+                        Margin="15"
+                        Text="Přidat"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource CorporateButton}"
+                        Clicked="btAdd_Click"/>
+                    </Grid>
+                </Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

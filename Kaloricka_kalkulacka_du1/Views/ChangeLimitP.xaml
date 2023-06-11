@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kaloricka_kalkulacka_du1.Views.ChangeLimitP"
+             Title="Kalorická kalkulačka">
+
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="{StaticResource CorporateBlue}">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Stanovení nové meze"
+               HorizontalOptions="Center"
+               Margin="1,8"
+               Grid.Row="1"
+               FontSize="15"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Text="Bílkoviny*"
+               HorizontalOptions="Center"
+               FontSize="15"
+               Grid.Row="0"
+               Grid.Column="1"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Text="Sacharidy*"
+               HorizontalOptions="Center"
+               FontSize="15"
+               Grid.Row="2"
+               Grid.Column="1"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Text="Tuky*"
+               HorizontalOptions="Center"
+               FontSize="15"
+               Grid.Row="4"
+               Grid.Column="1"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Text="Cukry*"
+               HorizontalOptions="Center"
+               FontSize="15"
+               Grid.Row="6"
+               Grid.Column="1"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Grid.Row="2"
+               Text="Velikost uvádějte v gramech"
+               FontSize="15"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource CorporateWhite}"/>
+                <Label Grid.Row="6"
+               Text="Zkontrolujte data!"
+               HorizontalOptions="Center"
+               TextColor="Red"
+               x:Name="lbError"
+               IsVisible="Hidden"/>
+
+                <Entry Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="10"
+                 x:Name="tbChangeProtein"
+                       Keyboard="Numeric"
+                       Unfocused="UnfocusedEn6"
+                 Text= "{Binding protein, Mode=TwoWay}"
+                  Background="{StaticResource CorporateBlue}"
+                         TextColor="{StaticResource CorporateWhite}"/>
+                <Entry Grid.Row="3"
+                 Grid.Column="1"
+                 Margin="10"
+                       Keyboard="Numeric"
+                       Unfocused="UnfocusedEn7"
+                 x:Name="tbChangeCarbohydrates"
+                 Text= "{Binding carbohydrates, Mode=TwoWay}"
+                  Background="{StaticResource CorporateBlue}"
+                         TextColor="{StaticResource CorporateWhite}"/>
+                <Entry Grid.Row="5"
+                 Grid.Column="1"
+                 Margin="10"
+                       Keyboard="Numeric"
+                 x:Name="tbChangeSugar"
+                       Unfocused="UnfocusedEn8"
+                 Text= "{Binding sugar, Mode=TwoWay}"
+                  Background="{StaticResource CorporateBlue}"
+                         TextColor="{StaticResource CorporateWhite}"/>
+                <Entry Grid.Row="7"
+                 Grid.Column="1"
+                 Margin="10"
+                       Keyboard="Numeric"
+                       Unfocused="UnfocusedEn9"
+                 x:Name="tbChangeFat"
+                 Text= "{Binding fat, Mode=TwoWay}" 
+                  Background="{StaticResource CorporateBlue}"
+                         TextColor="{StaticResource CorporateWhite}"/>
+                <Button Grid.Column="0" 
+                Grid.Row="6" 
+                Grid.RowSpan="3"
+                Margin="30"
+                        Clicked="Button_Click"
+                Text="Uložit" 
+                Style="{StaticResource CorporateButton}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
